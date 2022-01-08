@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="contextLoginForm" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: A19882;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Group layoutX="398.0" layoutY="17.0" />
+      <TextField fx:id="txtPassword" layoutX="187.0" layoutY="160.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <Label layoutX="55.0" layoutY="117.0" text="User Name" />
+      <Label layoutX="55.0" layoutY="165.0" text="Password" />
+      <TextField fx:id="txtUserName" layoutX="187.0" layoutY="112.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <PasswordField fx:id="fieldPassword" layoutX="187.0" layoutY="160.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="200.0" layoutY="220.0" onAction="#cancelOnAction" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: D6D2C4; -fx-background-radius: 10;" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="313.0" layoutY="220.0" onAction="#loginOnAction" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: FBB040; -fx-background-radius: 10;" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="imgHidePwd" fitHeight="30.0" fitWidth="30.0" layoutX="383.0" layoutY="158.0" onMouseClicked="#hidePasswordOnAction">
+         <image>
+            <Image url="@../assets/images/hidePasswordicon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgShowPwd" fitHeight="30.0" fitWidth="30.0" layoutX="383.0" layoutY="158.0" onMouseClicked="#showPasswordOnAction">
+         <image>
+            <Image url="@../assets/images/showPasswordIcon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView blendMode="DIFFERENCE" fitHeight="68.0" fitWidth="68.0" layoutX="216.0" layoutY="20.0">
+         <image>
+            <Image url="@../assets/images/loginIcon1.png" />
+         </image>
+      </ImageView>
+      <Circle blendMode="OVERLAY" fill="#8d8d8d" layoutX="250.0" layoutY="54.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

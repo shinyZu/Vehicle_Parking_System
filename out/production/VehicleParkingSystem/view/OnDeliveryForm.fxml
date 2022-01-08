@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="contextOnDelivery" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: A19882;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OnDeliveryFormController">
+   <children>
+      <TableView fx:id="tblOnDelivery" layoutX="25.0" layoutY="167.0" prefHeight="395.0" prefWidth="941.0">
+         <columns>
+            <TableColumn fx:id="colVehicleNo" minWidth="210.0" prefWidth="210.0" text="Vehicle Number" />
+            <TableColumn fx:id="colVehicleType" minWidth="228.0" prefWidth="241.0" text="Vehicle Type" />
+            <TableColumn fx:id="colDriverName" minWidth="230.0" prefWidth="252.0" text="Driver Name" />
+            <TableColumn fx:id="colLeftTime" minWidth="237.0" prefWidth="245.0" text="Left Time" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="65.0" prefWidth="1000.0" style="-fx-background-color: #4E413B;">
+         <children>
+            <JFXButton fx:id="btnLogout" buttonType="RAISED" layoutX="882.0" layoutY="12.0" onAction="#logoutOnAction" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: DBDBDB; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20;" text="Log Out">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView blendMode="ADD" fitHeight="51.0" fitWidth="53.0" layoutX="23.0" layoutY="7.0">
+               <image>
+                  <Image url="@../assets/images/loginIcon1.png" />
+               </image>
+            </ImageView>
+            <Circle blendMode="OVERLAY" fill="WHITE" layoutX="50.0" layoutY="32.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbOptions" focusColor="BLACK" layoutX="25.0" layoutY="91.0" onAction="#listOnDeliveryVehiclesOnAction" prefHeight="35.0" prefWidth="190.0" promptText="On Delivery" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnAddVehicle" layoutX="696.0" layoutY="88.0" onAction="#addVehicleOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: FBB040; -fx-background-radius: 10; -fx-border-radius: 10;" text="Add Vehicle">
+         <buttonType>RAISED</buttonType>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAddDriver" buttonType="RAISED" layoutX="846.0" layoutY="88.0" onAction="#addDriverOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: FBB040; -fx-background-radius: 10; -fx-border-radius: 10;" text="Add Driver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

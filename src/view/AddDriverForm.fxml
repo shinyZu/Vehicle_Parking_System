@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="contextAddDriver" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: A19882;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverFormController">
+   <children>
+      <Label layoutX="35.0" layoutY="45.0" text="Driver Name" />
+      <TextField fx:id="txtDriverName" layoutX="163.0" layoutY="40.0" prefHeight="26.0" prefWidth="412.0" promptText="FirstName LastName" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <Label layoutX="35.0" layoutY="91.0" text="NIC" />
+      <TextField fx:id="txtNIC" layoutX="163.0" layoutY="86.0" prefHeight="26.0" prefWidth="412.0" promptText="0000000000V / 000000000000" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <Label layoutX="35.0" layoutY="139.0" text="Driver License No." />
+      <TextField fx:id="txtLicenseNo" layoutX="164.0" layoutY="134.0" prefHeight="26.0" prefWidth="412.0" promptText="B0000000" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <Label layoutX="32.0" layoutY="205.0" text="Address" />
+      <JFXButton fx:id="btnAddNewDriver" buttonType="RAISED" layoutX="480.0" layoutY="295.0" onAction="#addNewDriverOnAction" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: FBB040; -fx-background-radius: 10;" text="Add Driver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="33.0" layoutY="257.0" text="Contact" />
+      <TextField fx:id="txtAddress" layoutX="164.0" layoutY="177.0" prefHeight="56.0" prefWidth="412.0" promptText="City" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <TextField fx:id="txtContact" layoutX="163.0" layoutY="252.0" prefHeight="26.0" prefWidth="412.0" promptText="Mobile Number" style="-fx-background-color: E8F6EF; -fx-background-radius: 5;" />
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="369.0" layoutY="296.0" onAction="#cancelOnAction" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: E1D89F; -fx-background-radius: 10;" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

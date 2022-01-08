@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="contextMainForm" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane layoutX="90.0" layoutY="346.0" prefHeight="205.0" prefWidth="398.0" style="-fx-background-color: F2A365; -fx-background-radius: 15;">
+         <children>
+            <Text fx:id="txtSlotNumber" fill="#3c3939" layoutX="122.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Text>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="28.0" prefHeight="35.0" prefWidth="314.0" text="Your Parking Slot Number ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <JFXButton fx:id="btnMngLogin" buttonType="RAISED" layoutX="669.0" layoutY="502.0" onAction="#goToLoginFormOnAction" prefHeight="43.0" prefWidth="253.0" style="-fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 5;" text="Management Login" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Button fx:id="btnParkVehicle" layoutX="633.0" layoutY="300.0" mnemonicParsing="false" onAction="#parkVehicleOnAction" prefHeight="59.0" prefWidth="324.0" style="-fx-background-radius: 20; -fx-background-color: #badc58;" text="Park Vehicle">
+         <effect>
+            <InnerShadow choke="0.02" height="32.96" radius="14.567499999999999" width="27.31" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnOnDeliveryShift" layoutX="633.0" layoutY="372.0" mnemonicParsing="false" onAction="#onDeliveryShiftOnAction" prefHeight="59.0" prefWidth="324.0" style="-fx-background-radius: 20; -fx-background-color: E1D89F;" text="On Delivery Shift">
+         <effect>
+            <InnerShadow choke="0.02" height="32.96" radius="14.567499999999999" width="27.31" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Pane fx:id="paneClock" layoutX="663.0" layoutY="42.0" prefHeight="233.0" prefWidth="239.0" style="-fx-border-color: white; -fx-border-width: 10; -fx-border-radius: 200;">
+         <children>
+            <Text fx:id="txtTime" fill="WHITE" layoutX="22.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="08:35:16 AM" wrappingWidth="194.36475902795792">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtDate" fill="WHITE" layoutX="65.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2021-July-16">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtDay" fill="WHITE" layoutX="69.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="90.0" layoutY="45.0" prefHeight="77.0" prefWidth="398.0" style="-fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 5;">
+         <children>
+            <Label layoutX="14.0" layoutY="29.0" text="Vehicle Number" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbSelectVehicle" focusColor="WHITE" layoutX="145.0" layoutY="26.0" onAction="#searchVehicleTypeOnAction" prefHeight="26.0" prefWidth="239.0" promptText="   Select" styleClass="cmbVehicleNoValue" unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </Pane>
+      <Pane layoutX="90.0" layoutY="144.0" prefHeight="77.0" prefWidth="398.0" style="-fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 5;">
+         <children>
+            <Label layoutX="18.0" layoutY="29.0" text="Vehicle Type" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtVehicleType" editable="false" focusColor="WHITE" layoutX="142.0" layoutY="26.0" prefHeight="26.0" prefWidth="239.0" styleClass="txtVehicleType" unFocusColor="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="90.0" layoutY="249.0" prefHeight="77.0" prefWidth="398.0" style="-fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 5;">
+         <children>
+            <Label layoutX="19.0" layoutY="29.0" text="Driver Name" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbDriver" focusColor="WHITE" layoutX="141.0" layoutY="26.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#searchDrivingVehicleOnAction" prefHeight="26.0" prefWidth="239.0" promptText="   Select" styleClass="cmbDriverNameValue" unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow height="45.285" radius="28.213749999999997" width="69.57" />
+   </effect>
+</AnchorPane>

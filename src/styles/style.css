@@ -1,0 +1,28 @@
+.ButtonEffect{
+    -fx-effect: innershadow;
+}
+.txtVehicleType{
+    -fx-text-fill: white;
+    //-fx-prompt-text-fill: WHITE;
+}
+
+.cmbVehicleNoValue .cell:selected, .cmbDriverNameValue .cell:selected{
+    -fx-text-fill: white;
+    -fx-highlight-text-fill: white;
+
+}
+.cmbVehicleNoValue, .cmbDriverNameValue {
+    -fx-prompt-text-fill: white;
+
+}
+
+.cmbOptions .cell:selected{
+    -fx-prompt-text-fill: black;
+    -fx-text-fill: black;
+    -fx-highlight-text-fill: black;
+}
+
+/*
+.combo-box .cell:selected {
+    -fx-text-fill: red;
+}*/
